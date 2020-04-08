@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="355dp"
+    android:padding="@dimen/standard_spacer">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cell_card"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:layout_marginBottom="@dimen/standard_half_spacer"
+        card_view:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/cell_header"
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+
+                <ImageView
+                    android:id="@+id/cell_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:transitionName="@string/poster_image_transition"
+                    android:foreground="@drawable/gradient_shim"
+                    android:scaleType="fitXY"
+                    tools:src="@drawable/store_image" />
+
+                <TextView
+                    android:id="@+id/cell_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:fontFamily="@font/app_font"
+                    android:paddingLeft="@dimen/standard_half_spacer"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="@dimen/standard_half_spacer"
+                    android:textColor="#ffffff"
+                    android:textFontWeight="700"
+                    android:textSize="32sp"
+                    android:textStyle="italic"
+                    tools:text="OppenLab" />
+
+                <ImageView
+                    android:id="@+id/cell_app_type_image"
+                    android:layout_width="30dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:scaleType="centerInside"
+                    android:layout_margin="@dimen/standard_spacer"
+                    tools:src="@drawable/logo_pwa" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cell_header"
+                android:padding="@dimen/standard_spacer">
+
+                <TextView
+                    android:id="@+id/cell_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/app_font"
+                    tools:text="A short app descriptionA short app descriptionA short app description" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
