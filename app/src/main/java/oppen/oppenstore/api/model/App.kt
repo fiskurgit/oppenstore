@@ -13,5 +13,5 @@ class App(
     val image: String,
     val url: String,
     val short_description: String,
-    val full_description: String
+    val content: List<Content>
 )

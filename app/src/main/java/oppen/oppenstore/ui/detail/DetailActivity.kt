@@ -1,15 +1,22 @@
 package oppen.oppenstore.ui.detail
 
+import android.app.DownloadManager
+import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.content.IntentFilter
+import android.net.Uri
 import android.os.Bundle
+import android.os.Environment
+import android.util.Log
 import android.view.MenuItem
-import com.google.android.material.snackbar.Snackbar
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
-import oppen.oppenstore.R
-
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_detail.*
+import oppen.oppenstore.R
 import oppen.oppenstore.api.CatalogueRepository
 import oppen.oppenstore.api.DebugCatalogue
 import oppen.oppenstore.api.model.App
@@ -26,6 +33,13 @@ class DetailActivity : AppCompatActivity(), DetailView {
         }
     }
 
+    var downloadComplete: BroadcastReceiver = object : BroadcastReceiver() {
+        override fun onReceive(ctxt: Context, intent: Intent) {
+            Log.d("oppen", "downloadComplete...")
+            startActivity(Intent(DownloadManager.ACTION_VIEW_DOWNLOADS))
+        }
+    }
+
     private lateinit var presenter: DetailPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,18 +49,56 @@ class DetailActivity : AppCompatActivity(), DetailView {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        fab.setOnClickListener {
-            //todo - download the app - or open the pwa
-        }
+        content_recycler.layoutManager = LinearLayoutManager(this)
 
         presenter = DetailPresenter(this, CatalogueRepository(DebugCatalogue(this)))
         presenter.getApp(intent.getStringExtra(EXTRA_OPPEN_ID)!!)
+
+        registerReceiver(downloadComplete, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
+    }
+
+    override fun onDestroy() {
+        unregisterReceiver(downloadComplete)
+        super.onDestroy()
     }
 
     override fun showApp(app: App) {
         toolbar_layout.title = app.title
 
         Glide.with(this).load(app.image).into(detail_banner_image)
+
+        content_recycler.adapter = DetailAdapter(this, app.content)
+
+        when (app.type) {
+            "apk" -> {
+                fab.setImageResource(R.drawable.get_app)
+            }
+            "pwa" -> {
+                fab.setImageResource(R.drawable.open_pwa)
+            }
+        }
+
+        fab.setOnClickListener {
+            when (app.type) {
+                "apk" -> {
+                    installApk(app)
+                    Toast.makeText(this, "Downloading ${app.title}", Toast.LENGTH_SHORT).show()
+                }
+                "pwa" -> {
+                    startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(app.url)))
+                }
+            }
+        }
+    }
+
+    private fun installApk(app: App){
+        val request = DownloadManager.Request(Uri.parse(app.url))
+        request.setDescription("ÖppenStore software install")
+        request.setTitle(app.title)
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
+        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, app.url.split("/").last())
+        val manager = getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
+        manager.enqueue(request)
     }
 
     override fun showError(error: String) {

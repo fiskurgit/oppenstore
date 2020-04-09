@@ -11,4 +11,5 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="poster_image_transition">poster_image_transition</string>
     <string name="poster_label_transition">poster_label_transition</string>
+    <string name="www">WWW</string>
 </resources>

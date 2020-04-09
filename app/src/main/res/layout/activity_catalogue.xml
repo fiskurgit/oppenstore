@@ -24,7 +24,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:paddingRight="@dimen/standard_spacer">
+                android:paddingRight="@dimen/standard_half_spacer">
 
                 <ImageView
                     android:layout_width="48dp"
@@ -44,7 +44,7 @@
                     android:textFontWeight="700"
                     android:fontFamily="@font/app_font"
                     android:layout_alignParentBottom="true"
-                    android:text="WWW" />
+                    android:text="@string/www" />
 
             </RelativeLayout>
 

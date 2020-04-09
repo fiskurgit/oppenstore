@@ -1,14 +1,23 @@
 {
     "apps": [
         {
-            "oppen_id": "opn_redakt",
+            "oppen_id": "oppen.android.redaktor",
             "title": "Redaktör",
             "type": "apk",
             "version": "1.0.0",
             "image": "https://oppenlab.net/services/oppenstore/assets/store_image_redaktor.png",
-            "url": "",
+            "url": "https://oppenlab.net/services/oppenstore/assets/apk/opeen_redaktor_release_1_0_0.apk",
             "short_description": "A text editor designed for use with Termux and external keyboards",
-            "full_description": "A text editor designed for use with Termux and external keyboards, Redaktör uses Androids 'Storage Access Framework' which allows read/write access to files in device storage, Termux, Google Drive and other services. When using with a physical keyboard standard shortcuts are available (ctrl-o, ctrl-s, ctrl-n for open/save/new). Mardown files also include a preview screen"
+            "content": [
+                {
+                    "type": "text",
+                    "text": "A text editor designed for use with Termux and external keyboards, Redaktör uses Androids 'Storage Access Framework' which allows read/write access to files in device storage, Termux, Google Drive and other services. When using with a physical keyboard standard shortcuts are available (ctrl-o, ctrl-s, ctrl-n for open/save/new). Mardown files also include a preview screen"
+                },
+                {
+                    "type": "image",
+                    "image": "https://oppenlab.net/services/oppenstore/assets/store_image_redaktor.png"
+                }
+            ]
         },
         {
             "oppen_id": "opn_enkdrw",
@@ -16,9 +25,18 @@
             "type": "pwa",
             "version": "n/a",
             "image": "https://oppenlab.net/services/oppenstore/assets/store_image_enkel_draw.png",
-            "url": "",
+            "url": "https://oppenlab.net/pwa/enkel_draw",
             "short_description": "A simple drawing app for children",
-            "full_description": "A simple drawing app for children, designed so they're kept in-app with a simple ui, you can also save their creations"
+            "content": [
+                {
+                    "type": "text",
+                    "text": "A text editor designed for use with Termux and external keyboards, Redaktör uses Androids 'Storage Access Framework' which allows read/write access to files in device storage, Termux, Google Drive and other services. When using with a physical keyboard standard shortcuts are available (ctrl-o, ctrl-s, ctrl-n for open/save/new). Mardown files also include a preview screen"
+                },
+                {
+                    "type": "image",
+                    "image": "https://oppenlab.net/services/oppenstore/assets/store_image_redaktor.png"
+                }
+            ]
         },
         {
             "oppen_id": "qwerty",
@@ -26,9 +44,18 @@
             "type": "apk",
             "version": "1.0.0",
             "image": "https://oppenlab.net/services/oppenstore/assets/store_image_redaktor.png",
-            "url": "",
+            "url": "https://oppenlab.net/services/oppenstore/assets/apk/opeen_redaktor_release_1_0_0.apk",
             "short_description": "A text editor designed for use with Termux and/or external keyboards",
-            "full_description": "A text editor designed for use with Termux and/or external keyboards, Redaktör uses Androids 'Storage Access Framework' which allows read/write access to files in device storage, Termux, Google Drive and other services. When using with a physical keyboard standard shortcuts are available (ctrl-o, ctrl-s, ctrl-n for open/save/new). Mardown files also include a preview screen"
+            "content": [
+                {
+                    "type": "text",
+                    "text": "A text editor designed for use with Termux and external keyboards, Redaktör uses Androids 'Storage Access Framework' which allows read/write access to files in device storage, Termux, Google Drive and other services. When using with a physical keyboard standard shortcuts are available (ctrl-o, ctrl-s, ctrl-n for open/save/new). Mardown files also include a preview screen"
+                },
+                {
+                    "type": "image",
+                    "image": "https://oppenlab.net/services/oppenstore/assets/store_image_redaktor.png"
+                }
+            ]
         },
         {
             "oppen_id": "poiuyt",
@@ -36,9 +63,18 @@
             "type": "pwa",
             "version": "n/a",
             "image": "https://oppenlab.net/services/oppenstore/assets/store_image_enkel_draw.png",
-            "url": "",
+            "url": "https://oppenlab.net/pwa/enkel_draw",
             "short_description": "A simple drawing app for children",
-            "full_description": "A simple drawing app for children, designed so they're kept in-app with a simple ui, you can also save their creations"
+            "content": [
+                {
+                    "type": "text",
+                    "text": "A text editor designed for use with Termux and external keyboards, Redaktör uses Androids 'Storage Access Framework' which allows read/write access to files in device storage, Termux, Google Drive and other services. When using with a physical keyboard standard shortcuts are available (ctrl-o, ctrl-s, ctrl-n for open/save/new). Mardown files also include a preview screen"
+                },
+                {
+                    "type": "image",
+                    "image": "https://oppenlab.net/services/oppenstore/assets/store_image_redaktor.png"
+                }
+            ]
         }
     ]
 }

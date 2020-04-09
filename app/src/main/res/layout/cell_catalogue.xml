@@ -14,7 +14,6 @@
         android:clickable="true"
         android:focusable="true"
         android:foreground="?attr/selectableItemBackground"
-        android:layout_marginBottom="@dimen/standard_half_spacer"
         card_view:cardCornerRadius="4dp">
 
         <RelativeLayout
@@ -59,6 +58,16 @@
                     android:scaleType="centerInside"
                     android:layout_margin="@dimen/standard_spacer"
                     tools:src="@drawable/logo_pwa" />
+                <TextView
+                    android:id="@+id/installed_label"
+                    android:drawableLeft="@drawable/tick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="@dimen/standard_half_spacer"
+                    android:fontFamily="@font/app_font"
+                    android:textColor="#ffffff"
+                    android:text=" INSTALLED" />
 
             </RelativeLayout>
 
@@ -73,7 +82,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/app_font"
-                    tools:text="A short app descriptionA short app descriptionA short app description" />
+                    tools:text="A short app descriptionA short app descriptionA short app description hanging glyphs ypypy" />
 
 
             </RelativeLayout>
