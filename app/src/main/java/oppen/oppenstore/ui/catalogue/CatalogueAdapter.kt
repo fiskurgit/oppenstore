@@ -11,6 +11,7 @@ import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.cell_catalogue.view.*
 import oppen.oppenstore.R
 import oppen.oppenstore.api.model.App
+import oppen.oppenstore.installed
 
 
 class CatalogueAdapter(private val context: Context, private val apps: List<App>, private val callback: (app:App, image: ImageView) -> Unit ): RecyclerView.Adapter<CatalogueAdapter.CatalogueViewHolder>() {
@@ -31,7 +32,7 @@ class CatalogueAdapter(private val context: Context, private val apps: List<App>
         holder.itemView.cell_title.text = app.title
         holder.itemView.cell_description.text = app.short_description
 
-        if(installed(app.oppen_id)){
+        if(context.installed(app.oppen_id)){
             holder.itemView.installed_label.visibility = View.VISIBLE
         }else{
             holder.itemView.installed_label.visibility = View.GONE
@@ -47,15 +48,6 @@ class CatalogueAdapter(private val context: Context, private val apps: List<App>
 
         holder.itemView.cell_card.setOnClickListener {
             callback.invoke(apps[holder.adapterPosition], holder.itemView.cell_image)
-        }
-    }
-
-    private fun installed(packageName: String): Boolean{
-        return try {
-            context.packageManager.getPackageInfo(packageName, 0)
-            true
-        } catch (e: PackageManager.NameNotFoundException) {
-            false
         }
     }
 }

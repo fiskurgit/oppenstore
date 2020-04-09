@@ -20,6 +20,7 @@ import oppen.oppenstore.R
 import oppen.oppenstore.api.CatalogueRepository
 import oppen.oppenstore.api.DebugCatalogue
 import oppen.oppenstore.api.model.App
+import oppen.oppenstore.installed
 
 class DetailActivity : AppCompatActivity(), DetailView {
 
@@ -78,11 +79,22 @@ class DetailActivity : AppCompatActivity(), DetailView {
             }
         }
 
+        val installed = installed(app.oppen_id)
+        if(installed) fab.setImageResource(R.drawable.open_pwa)
+
         fab.setOnClickListener {
             when (app.type) {
                 "apk" -> {
-                    installApk(app)
-                    Toast.makeText(this, "Downloading ${app.title}", Toast.LENGTH_SHORT).show()
+                    when {
+                        installed -> {
+                            val launchIntent = packageManager.getLaunchIntentForPackage(app.oppen_id)
+                            startActivity(launchIntent)
+                        }
+                        else -> {
+                            installApk(app)
+                            Toast.makeText(this, "Downloading ${app.title}", Toast.LENGTH_SHORT).show()
+                        }
+                    }
                 }
                 "pwa" -> {
                     startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(app.url)))
@@ -118,5 +130,4 @@ class DetailActivity : AppCompatActivity(), DetailView {
         finish()
         overridePendingTransition(-1,  R.anim.fade_out)
     }
-
 }
