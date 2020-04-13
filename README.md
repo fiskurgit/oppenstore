@@ -4,7 +4,7 @@ I've given up on Google (in general), and the Play Store (so many reasons). All 
 
 ## Projects
 
-Source code should be publically available for all projects. No project should make use of any Google Services API or remote Google service. All projects should run without issue on [LineageOS](https://lineageos.org/) or any other de-Googled Android fork.
+Source code should be publically available for all projects (once tidied up...). No project should make use of any Google Services API (all projects should run without issue on [LineageOS](https://lineageos.org/) or any other de-Googled Android fork). There is no analytics of any kind in any of Öppen's software.
 
 Projects currently available in ÖppenStore:
 
