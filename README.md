@@ -60,4 +60,4 @@ Projects currently available in ÖppenStore:
 * Fotoram: [github.com/fiskurgit/oppen_fotoram](https://github.com/fiskurgit/oppen_fotoram)
 
 ### Progressive Web Apps
-* EnkelDraw (Progressive Web App)
+* EnkelDraw [oppenlab.net/pwa/enkel_draw](https://oppenlab.net/pwa/enkel_draw)
