@@ -1,5 +1,7 @@
 # ÖppenStore
 
+I've given up on Google (in general), and the Play Store (so many reasons). All future non-commercial projects will available through the Oppen Store Android app.
+
 ## Project Listing Format
 
 * **oppen_id** - unique identifier, for Android APKs use app package name
@@ -52,6 +54,8 @@ Example entry:
 The URL is packaged with the app, but accessed remotely: [fiskurgit.github.io/oppenstore/app/src/main/assets/oppenstore.json](https://fiskurgit.github.io/oppenstore/app/src/main/assets/oppenstore.json) - this enables local testing of updates while debugging the Android app.
 
 ## Projects
+
+Source code should be publically available for all projects. No project should make use of any Google Services API or remote Google service. All projects should run without issue on [LineageOS](https://lineageos.org/).
 
 Projects currently available in ÖppenStore:
 
