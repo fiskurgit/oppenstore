@@ -2,15 +2,15 @@
 
 ## Project Listing Format
 
-**oppen_id** - unique identifier, for Android APKs use app package name
-**title** - project title
-**type** - currently `apk` or `pwa`, `desktop_pwa` may appear in the future
-**version** - this will drive app update logic for APKs
-**web_url** - optional web page for the project
-**image** - main banner image for the project
-**url** - download URL of the APK, or web url for a PWA
-**short_description** - single line overview of the project
-**content** - an array of content blocks, current types: `text` and `image`
+* **oppen_id** - unique identifier, for Android APKs use app package name
+* **title** - project title
+* **type** - currently `apk` or `pwa`, `desktop_pwa` may appear in the future
+* **version** - this will drive app update logic for APKs
+* **web_url** - optional web page for the project
+* **image** - main banner image for the project
+* **url** - download URL of the APK, or web url for a PWA
+* **short_description** - single line overview of the project
+* **content** - an array of content blocks, current types: `text` and `image`
 
 
 Example entry:
