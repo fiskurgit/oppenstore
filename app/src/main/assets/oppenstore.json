@@ -5,6 +5,7 @@
             "title": "Redaktör",
             "type": "apk",
             "version": "1.0.0",
+            "web_url": "https://oppenlab.net",
             "image": "https://oppenlab.net/services/oppenstore/assets/redaktor/store_image_redaktor.png",
             "url": "https://oppenlab.net/services/oppenstore/assets/apk/opeen_redaktor_release_1_0_0.apk",
             "short_description": "A text editor designed for use with Termux and external keyboards",
@@ -33,20 +34,25 @@
         },
         {
             "oppen_id": "opn_enkdrw",
-            "title": "Enkel Draw",
+            "title": "EnkelDraw",
             "type": "pwa",
             "version": "n/a",
+            "web_url": "https://www.oppenlab.net/blog/2020/04/01/enkel-ritning/",
             "image": "https://oppenlab.net/services/oppenstore/assets/store_image_enkel_draw.png",
             "url": "https://oppenlab.net/pwa/enkel_draw",
             "short_description": "A simple drawing app for children",
             "content": [
                 {
                     "type": "text",
-                    "text": "A text editor designed for use with Termux and external keyboards, Redaktör uses Androids 'Storage Access Framework' which allows read/write access to files in device storage, Termux, Google Drive and other services. When using with a physical keyboard standard shortcuts are available (ctrl-o, ctrl-s, ctrl-n for open/save/new). Mardown files also include a preview screen"
+                    "text": "My daughter enjoyed scribbling with the drawing mode in Google Keep but kept losing the canvas due to so many ways to navigate away. EnkelDraw fairs much better, young children are less likely to exit the app which makes the experience more fun for children and parents."
                 },
                 {
                     "type": "image",
-                    "image": "https://oppenlab.net/services/oppenstore/assets/store_image_redaktor.png"
+                    "image": "https://oppenlab.net/services/oppenstore/assets/enkel_draw/store_enkel_example.png"
+                },
+                {
+                    "type": "text",
+                    "text": "There's also a popup colour picker and an option to save the images locally. EnkelDraw can also be installed on a desktop computer (view the site using Chrome)."
                 }
             ]
         },
@@ -55,6 +61,7 @@
             "title": "Fotoram",
             "type": "apk",
             "version": "1.0.0",
+            "web_url": "https://oppenlab.net",
             "image": "https://oppenlab.net/services/oppenstore/assets/photo_widget/oppen_photo_widget_main.jpg",
             "url": "https://oppenlab.net/services/oppenstore/assets/apk/opeen_redaktor_release_1_0_0.apk",
             "short_description": "A text editor designed for use with Termux and/or external keyboards",
@@ -74,6 +81,7 @@
             "title": "Enkel Draw",
             "type": "pwa",
             "version": "n/a",
+            "web_url": "https://oppenlab.net",
             "image": "https://oppenlab.net/services/oppenstore/assets/store_image_enkel_draw.png",
             "url": "https://oppenlab.net/pwa/enkel_draw",
             "short_description": "A simple drawing app for children",
