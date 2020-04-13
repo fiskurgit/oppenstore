@@ -2,6 +2,20 @@
 
 I've given up on Google (in general), and the Play Store (so many reasons). All future non-commercial projects will available through the ÖppenStore Android app.
 
+## Projects
+
+Source code should be publically available for all projects. No project should make use of any Google Services API or remote Google service. All projects should run without issue on [LineageOS](https://lineageos.org/) or any other de-Googled Android fork.
+
+Projects currently available in ÖppenStore:
+
+### Android
+* Redaktör: [github.com/fiskurgit/oppen_redaktor](https://github.com/fiskurgit/oppen_redaktor)
+* Fotoram: [github.com/fiskurgit/oppen_fotoram](https://github.com/fiskurgit/oppen_fotoram)
+
+### Progressive Web Apps
+* EnkelDraw [oppenlab.net/pwa/enkel_draw](https://oppenlab.net/pwa/enkel_draw)
+
+<hr>
 ## Project Listing Format
 
 * **oppen_id** - unique identifier, for Android APKs use app package name
@@ -53,15 +67,3 @@ Example entry:
 
 The URL is packaged with the app, but accessed remotely: [fiskurgit.github.io/oppenstore/app/src/main/assets/oppenstore.json](https://fiskurgit.github.io/oppenstore/app/src/main/assets/oppenstore.json) - this enables local testing of updates while debugging the Android app.
 
-## Projects
-
-Source code should be publically available for all projects. No project should make use of any Google Services API or remote Google service. All projects should run without issue on [LineageOS](https://lineageos.org/) or any other de-Googled Android fork.
-
-Projects currently available in ÖppenStore:
-
-### Android
-* Redaktör: [github.com/fiskurgit/oppen_redaktor](https://github.com/fiskurgit/oppen_redaktor)
-* Fotoram: [github.com/fiskurgit/oppen_fotoram](https://github.com/fiskurgit/oppen_fotoram)
-
-### Progressive Web Apps
-* EnkelDraw [oppenlab.net/pwa/enkel_draw](https://oppenlab.net/pwa/enkel_draw)
