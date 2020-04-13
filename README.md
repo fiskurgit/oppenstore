@@ -49,13 +49,15 @@ Example entry:
         }
 ```
 
+The URL is packaged with the app, but accessed remotely: [fiskurgit.github.io/oppenstore/app/src/main/assets/oppenstore.json](https://fiskurgit.github.io/oppenstore/app/src/main/assets/oppenstore.json) - this enables local testing of updates while debugging the Android app.
+
 ## Projects
 
 Projects currently available in ÖppenStore:
 
 ### Android
-* Redaktör: https://github.com/fiskurgit/oppen_redaktor
-* Fotoram: https://github.com/fiskurgit/oppen_fotoram
+* Redaktör: [github.com/fiskurgit/oppen_redaktor](https://github.com/fiskurgit/oppen_redaktor)
+* Fotoram: [github.com/fiskurgit/oppen_fotoram](https://github.com/fiskurgit/oppen_fotoram)
 
 ### Progressive Web Apps
 * EnkelDraw (Progressive Web App)
