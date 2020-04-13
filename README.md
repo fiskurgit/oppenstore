@@ -16,6 +16,7 @@ Projects currently available in ÖppenStore:
 * EnkelDraw [oppenlab.net/pwa/enkel_draw](https://oppenlab.net/pwa/enkel_draw)
 
 <hr>
+
 ## Project Listing Format
 
 * **oppen_id** - unique identifier, for Android APKs use app package name
