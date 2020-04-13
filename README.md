@@ -1,6 +1,6 @@
 # ÖppenStore
 
-I've given up on Google (in general), and the Play Store (so many reasons). All future non-commercial projects will available through the Oppen Store Android app.
+I've given up on Google (in general), and the Play Store (so many reasons). All future non-commercial projects will available through the ÖppenStore Android app.
 
 ## Project Listing Format
 
@@ -55,7 +55,7 @@ The URL is packaged with the app, but accessed remotely: [fiskurgit.github.io/op
 
 ## Projects
 
-Source code should be publically available for all projects. No project should make use of any Google Services API or remote Google service. All projects should run without issue on [LineageOS](https://lineageos.org/).
+Source code should be publically available for all projects. No project should make use of any Google Services API or remote Google service. All projects should run without issue on [LineageOS](https://lineageos.org/) or any other de-Googled Android fork.
 
 Projects currently available in ÖppenStore:
 
