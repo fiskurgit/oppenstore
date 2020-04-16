@@ -83,7 +83,7 @@
             "type": "apk",
             "version": "1.0.1",
             "web_url": "https://oppenlab.net",
-            "image": "https://oppenlab.net/services/oppenstore/assets/store_image_enkel_draw.png",
+            "image": "https://fiskurgit.github.io/oppenstore/assets/skiss_store_main_screenshot.png",
             "url": "https://github.com/fiskurgit/Skiss/releases/download/1.0.0/skiss_ett_release_1_0_1.apk",
             "short_description": "Skiss framework generative experiment",
             "content": [
