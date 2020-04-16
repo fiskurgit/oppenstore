@@ -1,10 +1,15 @@
 ![ÖppenStore](oppenstore_logo.svg)
 
-I've given up on Google (in general), and the Play Store (so many reasons). All future non-commercial projects will available through the ÖppenStore Android app.
+I've given up on Google (in general), and the Play Store (so many reasons). All future non-commercial projects will available through this ÖppenStore Android app. 
+
+Github project: [github.com/fiskurgit/oppenstore](https://github.com/fiskurgit/oppenstore)  
+Github pages: [fiskurgit.github.io/oppenstore/](https://fiskurgit.github.io/oppenstore/)
 
 ## Projects
 
-Source code should be publically available for all projects (once tidied up...). No project should make use of any Google Services API (all projects should run without issue on [LineageOS](https://lineageos.org/) or any other de-Googled Android fork). There is no analytics of any kind in any of Öppen's software.
+* Source code should be publically available for all projects (once tidied up...). 
+* No Google Services API allowed (all projects should run without issue on [LineageOS](https://lineageos.org/) or any other de-Googled Android fork). 
+* No analytics of any kind in any of Öppen's software.
 
 Projects currently available in ÖppenStore:
 
