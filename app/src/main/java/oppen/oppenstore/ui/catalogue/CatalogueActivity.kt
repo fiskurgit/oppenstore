@@ -40,7 +40,11 @@ class CatalogueActivity : AppCompatActivity(), CatalogueView {
     presenter.getApps()
   }
 
-  override fun showApps(apps: List<App>) {
+    override fun checkVersion(storeVersion: String) {
+
+    }
+
+    override fun showApps(apps: List<App>) {
     catalogue_recycler.adapter = CatalogueAdapter(this, apps){ app, image ->
       val activityOptionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(this, image, resources.getString(R.string.poster_image_transition))
       startActivity(DetailActivity.createIntent(this, app.oppen_id), activityOptionsCompat.toBundle())
