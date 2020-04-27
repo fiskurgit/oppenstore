@@ -1,5 +1,7 @@
 {
-    "store_version": "1.0.0",
+    "store_version": "1.0.0B",
+    "store_repository": "https://github.com/fiskurgit/oppenstore",
+    "store_apk": "https://github.com/fiskurgit/oppenstore",
     "apps": [
         {
             "oppen_id": "oppen.android.redaktor",
@@ -65,11 +67,11 @@
             "web_url": "https://oppenlab.net",
             "image": "https://oppenlab.net/services/oppenstore/assets/photo_widget/oppen_photo_widget_main.jpg",
             "url": "https://oppenlab.net/services/oppenstore/assets/apk/opeen_redaktor_release_1_0_0.apk",
-            "short_description": "A text editor designed for use with Termux and/or external keyboards",
+            "short_description": "A widget to place photos on your phone home screen",
             "content": [
                 {
                     "type": "text",
-                    "text": "A text editor designed for use with Termux and external keyboards, Redaktör uses Androids 'Storage Access Framework' which allows read/write access to files in device storage, Termux, Google Drive and other services. When using with a physical keyboard standard shortcuts are available (ctrl-o, ctrl-s, ctrl-n for open/save/new). Mardown files also include a preview screen"
+                    "text": "There are a lot of these widgets on the Play Store but they're all poorly executed. This project is quick, supports high res images, will auto-rotate photos to the correct orientation, and stores images internally (no permissions issues)"
                 },
                 {
                     "type": "image",
@@ -89,11 +91,20 @@
             "content": [
                 {
                     "type": "text",
-                    "text": "A text editor designed for use with Termux and external keyboards, Redaktör uses Androids 'Storage Access Framework' which allows read/write access to files in device storage, Termux, Google Drive and other services. When using with a physical keyboard standard shortcuts are available (ctrl-o, ctrl-s, ctrl-n for open/save/new). Mardown files also include a preview screen"
+                    "text": "Skiss is a very lightweight and performant Android framework for 2D generative animations. The syntax closely mimics the Processing (www.processing.org) api so sketches can easily be ported between the two."
                 },
                 {
                     "type": "image",
-                    "image": "https://oppenlab.net/services/oppenstore/assets/store_image_redaktor.png"
+                    "image": "https://fiskurgit.github.io/oppenstore/assets/skiss_store_screenshot.png"
+                },
+                {
+                    "type": "text",
+                    "text": "Skiss is fully open source and free to use, it's a fairly niche use case: 2D animations using basic primitives, but the standard View Canvas is available for more control and it's easy to extend."
+                },
+                {
+                    "type": "web_button",
+                    "url": "https://github.com/fiskurgit/Skiss",
+                    "text": "View Skiss on Github"
                 }
             ]
         }

@@ -6,5 +6,6 @@ import com.squareup.moshi.JsonClass
 class Content(
     val type: String,
     val text: String?,
-    val image: String?
+    val image: String?,
+    val url: String?
 )

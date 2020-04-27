@@ -1,9 +1,8 @@
 package oppen.oppenstore.ui.catalogue
 
-import android.net.Uri
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.app.ActivityOptionsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
@@ -12,6 +11,9 @@ import oppen.oppenstore.R
 import oppen.oppenstore.api.CatalogueRepository
 import oppen.oppenstore.api.DebugCatalogue
 import oppen.oppenstore.api.model.App
+import oppen.oppenstore.appVersion
+import oppen.oppenstore.installApk
+import oppen.oppenstore.showUrl
 import oppen.oppenstore.ui.detail.DetailActivity
 
 class CatalogueActivity : AppCompatActivity(), CatalogueView {
@@ -27,24 +29,35 @@ class CatalogueActivity : AppCompatActivity(), CatalogueView {
     catalogue_recycler.layoutManager = LinearLayoutManager(this)
 
     launch_web_button.setOnClickListener {
-      CustomTabsIntent.Builder()
-        .setToolbarColor(resources.getColor(R.color.colorPrimary, null))
-        .enableUrlBarHiding()
-        .setShowTitle(true)
-        .setStartAnimations(this, R.anim.slide_in_right, R.anim.slide_out_left)
-        .setExitAnimations(this, -1, R.anim.fade_out)
-        .build().launchUrl(this, Uri.parse("https://www.oppenlab.net/blog/"))
+      showUrl("https://www.oppenlab.net/blog/")
     }
 
     presenter = CataloguePresenter(this, CatalogueRepository(DebugCatalogue(this)))
-    presenter.getApps()
+    presenter.getStore()
   }
 
-    override fun checkVersion(storeVersion: String) {
-
+    override fun checkVersion(storeVersion: String, storeUrl: String) {
+      val installedVersion = appVersion()
+      if(installedVersion != storeVersion){
+        val message = "New version available: $storeVersion (Installed: $installedVersion)"
+        AlertDialog.Builder(this)
+          .setTitle(R.string.update_dialog_title)
+          .setMessage(message)
+          .setPositiveButton("Download"){ _, _ ->
+            installApk(storeUrl, "Öppen Store")
+          }
+          .setNegativeButton("Cancel"){ _, _ -> }
+          .show()
+      }
     }
 
-    override fun showApps(apps: List<App>) {
+  override fun storeGitRepository(url: String) {
+    git_button.setOnClickListener {
+      showUrl(url)
+    }
+  }
+
+  override fun showApps(apps: List<App>) {
     catalogue_recycler.adapter = CatalogueAdapter(this, apps){ app, image ->
       val activityOptionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(this, image, resources.getString(R.string.poster_image_transition))
       startActivity(DetailActivity.createIntent(this, app.oppen_id), activityOptionsCompat.toBundle())

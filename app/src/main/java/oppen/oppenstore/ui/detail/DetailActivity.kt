@@ -20,6 +20,7 @@ import oppen.oppenstore.R
 import oppen.oppenstore.api.CatalogueRepository
 import oppen.oppenstore.api.DebugCatalogue
 import oppen.oppenstore.api.model.App
+import oppen.oppenstore.installApk
 import oppen.oppenstore.installed
 
 class DetailActivity : AppCompatActivity(), DetailView {
@@ -91,7 +92,7 @@ class DetailActivity : AppCompatActivity(), DetailView {
                             startActivity(launchIntent)
                         }
                         else -> {
-                            installApk(app)
+                            installApk(app.url, app.title)
                             Toast.makeText(this, "Downloading ${app.title}", Toast.LENGTH_SHORT).show()
                         }
                     }
@@ -101,16 +102,6 @@ class DetailActivity : AppCompatActivity(), DetailView {
                 }
             }
         }
-    }
-
-    private fun installApk(app: App){
-        val request = DownloadManager.Request(Uri.parse(app.url))
-        request.setDescription("ÖppenStore software install")
-        request.setTitle(app.title)
-        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, app.url.split("/").last())
-        val manager = getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
-        manager.enqueue(request)
     }
 
     override fun showError(error: String) {

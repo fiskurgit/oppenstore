@@ -7,6 +7,8 @@ import oppen.oppenstore.api.MoshiProvider
 @JsonClass(generateAdapter = true)
 class Apps(
     val store_version: String,
+    val store_repository: String,
+    val store_apk: String,
     val apps: List<App>
 ){
     companion object{

@@ -5,11 +5,12 @@ import oppen.oppenstore.ui.catalogue.CatalogueView
 
 class CataloguePresenter(private val view: CatalogueView, private val repository: CatalogueRepository) {
 
-    fun getApps(){
+    fun getStore(){
         repository.getApps({ error ->
             view.showError(error)
         }){apps ->
-            view.showApps(apps)
+            view.checkVersion(apps?.store_version ?: "", apps?.store_apk ?: "")
+            view.showApps(apps?.apps ?: arrayListOf())
         }
     }
 }

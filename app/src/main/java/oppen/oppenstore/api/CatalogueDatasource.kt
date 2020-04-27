@@ -1,7 +1,7 @@
 package oppen.oppenstore.api
 
-import oppen.oppenstore.api.model.App
+import oppen.oppenstore.api.model.Apps
 
 interface CatalogueDatasource {
-    fun getApps(onError: (message: String)-> Unit,  callback: (apps: List<App>) -> Unit)
+    fun getApps(onError: (message: String)-> Unit,  callback: (apps: Apps?) -> Unit)
 }
