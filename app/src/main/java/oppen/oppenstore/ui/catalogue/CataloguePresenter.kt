@@ -10,6 +10,7 @@ class CataloguePresenter(private val view: CatalogueView, private val repository
             view.showError(error)
         }){apps ->
             view.checkVersion(apps?.store_version ?: "", apps?.store_apk ?: "")
+            view.storeGitRepository(apps?.store_repository ?: "")
             view.showApps(apps?.apps ?: arrayListOf())
         }
     }

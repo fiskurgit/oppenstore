@@ -1,6 +1,6 @@
 {
-    "store_version": "1.0.0B",
-    "store_repository": "https://github.com/fiskurgit/oppenstore",
+    "store_version": "1.0.0",
+    "store_repository": "https://fiskurgit.github.io/oppenstore/",
     "store_apk": "https://github.com/fiskurgit/oppenstore",
     "apps": [
         {
