@@ -1,6 +1,6 @@
 ![ÖppenStore](oppenstore_logo.svg)
 
-I've given up on Google (in general), and the Play Store (so many reasons). All future non-commercial projects will available through this ÖppenStore Android app. 
+I've given up on Google (in general), and the Play Store (so many reasons). All future non-commercial projects will available through this ÖppenStore Android app  
 
 Github project: [github.com/fiskurgit/oppenstore](https://github.com/fiskurgit/oppenstore)  
 Github pages: [fiskurgit.github.io/oppenstore/](https://fiskurgit.github.io/oppenstore/)
