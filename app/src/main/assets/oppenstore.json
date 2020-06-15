@@ -19,7 +19,7 @@
                 },
                 {
                     "type": "web_button",
-                    "url": "https://codeberg.org/oppen/Latt"
+                    "url": "https://codeberg.org/oppen/Latt",
                     "text": "View Lätt on Codeberg"
                 }
             ]
