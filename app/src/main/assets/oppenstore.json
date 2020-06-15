@@ -16,6 +16,11 @@
                 {
                     "type": "text",
                     "text": "Lätt is a pro photo filter app that emulates real film stock."
+                },
+                {
+                    "type": "web_button",
+                    "url": "https://codeberg.org/oppen/Latt"
+                    "text": "View Lätt on Codeberg"
                 }
             ]
         },
